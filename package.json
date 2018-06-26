@@ -1,0 +1,56 @@
+{
+  "name": "cypress-notify",
+  "version": "1.0.0",
+  "description": "Cypress Notification Plugin",
+  "main": "./lib/index.js",
+  "module": "./src/index.js",
+  "scripts": {
+    "build": "babel src --presets babel-preset-env --out-dir lib",
+    "prepare": "npm run build",
+    "test": "ava"
+  },
+  "bin": {
+    "cypress-notify-request": "lib/notify-request.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khrome83/cypress-notify.git"
+  },
+  "keywords": [
+    "cypress",
+    "notification",
+    "plugin",
+    "chatbot",
+    "slack"
+  ],
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  },
+  "author": "Zane C. Milakovic <support@webgrind.io> (https://webgrind.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khrome83/cypress-notify/issues"
+  },
+  "files": [
+    "lib/"
+  ],
+  "homepage": "https://github.com/khrome83/cypress-notify#readme",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.15.1",
+    "form-data": "^2.3.2",
+    "fs-extra": "^6.0.1",
+    "mime-types": "^2.1.18",
+    "node-fetch": "^2.1.2"
+  }
+}
